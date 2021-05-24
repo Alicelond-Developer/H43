@@ -9,8 +9,9 @@ This prevents people from false claiming the project either for monetary prupose
 '''
 bot_creator_id = 321346463148015626
 art_creator_id = 253679155651018764
+translation_creator_id = 637599550995169281
 paypal_link = 'https://www.paypal.com/paypalme/fytex'
-github_link = 'https://github.com/Fytex/H43'
+github_link = 'https://github.com/Alicelond-Developer/H43'
 discord_link = 'https://discord.gg/hNGAWVH'
 
 
@@ -32,11 +33,13 @@ class HelpCommand(commands.MinimalHelpCommand):
 
             bot_creator = await ctx.bot.fetch_user(bot_creator_id)
             art_creator = await ctx.bot.fetch_user(art_creator_id)
+            translation_creator = await ctx.bot.fetch_user(translation_creator_id)
 
             donate_msg = f'''
-            Honestly, if you could donate me something for this open source project (bot), I would really appreciate that
-            \nBot Creator: Fytex -> {bot_creator}
-            \nArt Creator: BolachaTM -> {art_creator}\t[Instagram](https://www.instagram.com/amskun/)
+            もしあなたがこのオープンソースプロジェクト（Bot）のために何か寄付をしていただけるのであれば、私は本当に感謝します。
+            \nBot開発者: Fytex -> {bot_creator}
+            \n神絵師さん: BolachaTM -> {art_creator}\t[Instagram](https://www.instagram.com/amskun/)
+            \n翻訳者: Alicelond#0018 -> {translation_creator}\t[GitHub](https://github.com/Alicelond-Developer)
             \n[Donate Me]({paypal_link})
             \n[GitHub Repo]({github_link})
             \n[Discord Server]({discord_link})
@@ -46,24 +49,24 @@ class HelpCommand(commands.MinimalHelpCommand):
             donate_embed.set_thumbnail(
                 url='https://avatars1.githubusercontent.com/u/25065248?s=400&u=cfb97be8f4eef00e3f11ed883cd8b2b5f98d1ed9&v=4')
             donate_embed.add_field(name='-'*160, value=donate_msg)
-            donate_embed.set_footer(text='H43 created by: Fytex')
+            donate_embed.set_footer(text='H43の開発者 by: Fytex\nH43の翻訳者 by: Alicelond')
 
-            self.dm_embed = discord.Embed(title='Commands to use in DM',
+            self.dm_embed = discord.Embed(title='DMに使用するコマンド',
                                           colour=discord.Colour.blue())
             self.guild_embed = discord.Embed(
-                title='Commands to use in Servers', colour=discord.Colour.red())
+                title='サーバで使用するコマンド', colour=discord.Colour.red())
 
             self.donate_embed = donate_embed
 
     def get_destination(self):
         '''
-        Destination to send the help message
+        ヘルプメッセージを送信する宛先
         '''
         return self.context.author
 
     def get_cmd_help(self, cmd):
         '''
-        This is not a discord.py method
+        これはdiscord.pyのメソッドではありません。
         '''
         aliases = ' , '.join(cmd.aliases)
 

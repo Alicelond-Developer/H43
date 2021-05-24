@@ -1,110 +1,112 @@
-## Download
-For those who don't know where the download is [Click Here](https://github.com/Fytex/H43/archive/master.zip)
+## ダウンロード方法
+ダウンロードの場所がわからない方へ [ここをクリック](https://github.com/Alicelond-Developer/H43-Japanese-translation-Ver.-/archive/refs/heads/master.zip)
 
-Appreciate if you could help by leaving a big STAR ;)
+もし良ければ貴方がSTARを残すことによって助けることができれば感謝します。 ;)
 
 ## H43
 
-I started this project back in 2018 (didn't change much since then xD, not enough time for it) thinking about fun tools to prank my friends and as a way to gain more experience.
+私は2018年にこのプロジェクトを始めました（その時からあまり変わっていませんでした、そのための十分な時間がありませんでした）友人にいたずらするための楽しいツールを考え、より多くの経験を得るための方法として、このプロジェクトを始めました。
 
-I know people might use this for bad purposes but that's not my fault, I only have the intention to share my project with you. The ones that must be careful are the servers' owners.
+これを悪い目的で使う人がいるかもしれませんが、それは私のせいではなく、私のプロジェクトを皆さんと共有したいという意図があるだけです。注意しなければならないのは、サーバーの所有者です。
 
-You might be asking why I didn't put Mass DM as a command since that is such a recognized one. The answer is obvious... This wasn't made to annoy everyone in a server but to "prank" friend's servers....
+なぜMass DMをコマンドに入れなかったのか、という疑問があるかもしれません。その答えは明白です...。これはサーバー内のすべての人に迷惑をかけるために作ったのではなく、友人のサーバーに「いたずら」をするために作ったのです....
 
-If you want you can give me feedback for me to improve. One of the reasons I built this was to learn programming (the other reason is above xD). 
+もしあなたが望むなら、私が改善するためにフィードバックを与えることができます。私がこれを作った理由の一つは、プログラミングを学ぶためです（もう一つの理由は上に書いてあります）。
 
-When I have time I'll try to make this code better and add more feautures! :D
+時間があれば、このコードをもっと良くしたり、機能を追加したりしたいと思います。
 
-To prank your friend you will need to convince your friend to add the bot into his server, then you can execute the commands if u followed all the steps (Down) correctly!
+友達にイタズラするには、友達にbotを彼のサーバーに追加するように説得する必要があります。そして、すべてのステップ（権限設定など）が正しく行われていれば、コマンドを実行することができます。
 
-**Please read the last part at least if you want to skip the steps** 
+**手順を省略したい場合は、少なくとも最後の部分を読んでください。** 
 
-# What does this BOT do?
-**Destruction**
-Deletes all roles/channels
+# このBOTは何をしているの?
+**破壊**
+すべてのロールとチャンネルの削除
 
-Kicks/Bans Members
+メンバーのBANやKICK
 
-Edit Overview
+サーバーの見た目の変更
 
-**Spam**
-Spams Roles/Channels
+**スパム**
+ロールやチャンネルを作成してスパムをします。
 
-Edit Overview
+チャンネル数を増やして荒らします。
 
-**Invites**
-Invites Server's Bot is in and unbans you from them
+**招待**
+Botが入っているサーバーに招待し、そのBotが貴方のアクセスを禁止を解除します。
 
-**OP**
-Give yourself the best role (Maybe administrator)
+**管理者**
+自分に最高の役割を与える（多分、管理者権限）
 
 **DEOP**
-Remove all possible roles (permissions) form a member in a server
+サーバー内のメンバーの設定可能なすべてのロール（権限）をすべて削除する
 
 
-# Steps
+# やり方
 
-If you are on windows you can use H43_EXE instead of the source. But don't forget to read all of this or you will be lost.
+Windowsをお使いの方は、ソースから起動のほかにH43_EXEをお使いいただけます。しかし、このすべてを読むことを忘れないでください。そうしないと、あなたは道を踏み外してしまうかもしれません。
 
-I. **Create a Discord Bot**
+I. **Discordボットの作成**
 
-   1. Acess [this website](https://discordapp.com/developers/applications/)
-   2. Create an Application
-   3. Add a Discord Bot to the Application
-   4. Enable both Privileged Gateway Intents (PRESENCE INTENT and SERVER MEMBERS INTENT)
-   5. Finally, copy the TOKEN.
+   1. [ここのサイト](https://discordapp.com/developers/applications/)にアクセスしてください。
+   2. Create an Applicationを押してBOTを好きな名前で作ってください。
+   3. ADD a Botを押して、Botを有効化してください。
+   4. Privileged Gateway Intentsの両方を有効にする (PRESENCE INTENT と SERVER MEMBERS INTENT両方とも)
+   5. 最後に、TOKENのコピーしてください.
 
-website: ```https://discordapp.com/developers/applications/```
+1.に登場するここのサイトのURL: ```https://discordapp.com/developers/applications/```
 
 
-II. **Open config.ini and edit** (Maybe notepadd++)
+II. **config.iniを開き、編集します。** (notepadd++や、Visual Studio Codeを使うと確実です。)
 
-```In "Users" you can add as many as you want following the same format written. (Note: Name doesn't matter only ID next to it). These exploit_users are the users that have acess to your bot's commands. Note: You need to enable Developer mode to get users' ID!```
+```"Users"では、書かれているのと同じ書き方に従って、必要な数だけ追加できます。注：名前は重要ではなく、隣にあるユーザーIDのみが重要です）。これらのexploit_usersは、あなたのBotのコマンドを使えるユーザーのことを指しています。注意：UserIDを取得するには、開発者モードを有効にする必要があります。```
 
-```In "CooldownBypass" you can either set true or false. There is a cooldown in each command so you don't abuse them thinking it didn't work. If you want u can replace the false by true anytime you want.```
+```"CooldownBypass"は、trueまたはfalseを設定できます。各コマンドにはクールダウンがあるので、効果がなかったと思って乱用することができなくなります。望むならば、いつでもfalseをtrueに置き換えることができます。```
 
-```In "OfflineMode" you can either set true or false. Even if you set it to true it wont change bot's status if another instance of the bot is running. It will only not make bot's status online.```
+```"OfflineMode"では、trueまたはfalseを設定できます。trueに設定しても、他のBotのインスタンスが実行されている場合は、Botの状態は変化しません。ただし、オンライン状態にはなりません。```
 
-```In "Token" you can either write the token or leave it blank (default) if you don't want to write the token inside the file you can write it when the bot starts up however, you will have to paste in terminal everytime you start the bot```
+```"Token"には、Tokenを書き込むか、空白（デフォルト）にしておくことができます。Tokenをファイル内に書き込みたくない場合は、Botの起動時に書き込むことができますが、Botを起動するたびにターミナルにTokenをペーストする必要があります。```
 
-III. **Execute the script or executable depending on your OS**
+III. **お使いのOSに応じて、スクリプトまたは実行ファイルを実行してください。**
 
-IV. **Paste the token given before in the terminal**
+IV. **先ほどの作成したTokenをコンソールに貼り付ける**
 
-```You can skip this step if you wrote the token inside the config.ini```
+```Tokenをconfig.iniに記述した場合は、このステップを省略することができます。```
 
-V. **Invite the Bot to the server (Persuade them to invite your bot)**
+V. **Botをサーバーに招待する（説得して自分のBotを招待してもらう**
 
-```https://discordapp.com/oauth2/authorize?scope=bot&permissions=8&client_id=ID       Change 'ID' for your BOT's ID and send the link to your friend```
-```Note: If you think people never add bots that have permission n.º 8 (administrator) just change it to another number that has the same permissions (e.g Administrator + every other = Administrator, n.º 2146958847)```
+```https://discordapp.com/oauth2/authorize?scope=bot&permissions=8&client_id=ID 「ID」を自分のBOTのIDに変更して、友人にリンクを送るか、OAuth2からBotにチェックを入れて招待URLを作成することもできます。```
+```注意：8番（管理者）の権限を持つBotが追加されない場合は、同じ権限を持つ別の番号に変更してください（例：Administrator + every other = Administrator, n.º 2146958847）。```
 
-VI. **Check Help for commands**
+VI. **コマンドのヘルプを見る**
 
-```If you write H43?help in bot's DM or in a server where the bot is, it will DM you with the help (commands)```
+```BotのDMや、ボットがいるサーバーでH43?helpと送信すると、ヘルプ（コマンド一覧）をDMで送ってくれます。```
 
-## Warnings:
-Use this at your own risk. Your bot can be banned and user too.
+## 注意事項:
+ご自身の責任でご利用ください。あなたのBotはBANされ、ユーザーもBANされる可能性があります。
 
-Please don't try to destroy people lives... 
-For last, have fun!
+人の人生やサーバーを壊そうとするのはやめてほしい...。
+最後に、楽しんでください。
 
-## Donate / Help
-I would appreciate very much if you could donate something.
+## 募金・HELP
+何か寄付をしていただけると大変ありがたいです。
 
-My paypal is: https://paypal.me/h43
+開発者の paypal : https://paypal.me/h43
 
-If you could at least give me a star :D
+せめてSTARをつけてもらえれば嬉しい限りです！
 
-## Info
+## 情報
 
-Bot Creator: Fytex#4389     ID: 321346463148015626
+Bot開発者 : Fytex#4389     ID: 321346463148015626
 
-Art Creator: AmânDIOOO#7771 ID: 253679155651018764        www.instagram.com/amskun/
+神絵師さん : AmânDIOOO#7771 ID: 253679155651018764        www.instagram.com/amskun/
 
-Discord Server: https://discord.gg/hNGAWVH
+Bot翻訳者 : Alicelond#0018 ID: 637599550995169281
 
-## Found any Errors?
+Discordサポートサーバー: https://discord.gg/hNGAWVH
 
-Join my discord sever (link is above) and let me know :D, or you could just write here but I won't pay attention too early xD
+## エラーが発生した場合は?
+
+開発者のdiscord sever（リンクは上記記載）に参加して、バグやアイデアを提案してください。
 
 

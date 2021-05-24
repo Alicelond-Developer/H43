@@ -28,7 +28,7 @@ class ErrorHandler(commands.Cog):
                 return await ctx.reinvoke()
             else:
                 cooldown = error.retry_after
-                msg = f'''You tried to execute a command while on cooldown, you can try again in {cooldown:.2f}s
+                msg = f'''クールダウン中にコマンドを実行しようとしました。再度 {cooldown:.2f}秒後に実行してください。
                                 ```{ctx.message.content}```'''
                 return await ctx.author.send(msg)
 

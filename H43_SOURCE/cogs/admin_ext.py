@@ -10,22 +10,22 @@ class Admin_ext(commands.Cog):
     def cog_check(self, ctx):
         return isinstance(ctx.channel, discord.DMChannel)
 
-    @commands.command(brief='H43?invites [page\'s number]\nInvite (uses another person invite) and unban yourself from servers bot is in')
+    @commands.command(brief='H43?invites [page\'s number]\nBotが入っているサーバーの招待URLを作成します。Botが入っているサーバーのUserのBAN解除を同時に行います。')
     async def invites(self, ctx, page=0):
         enum_guilds = {}
         guilds = self.client.guilds
 
         if len(guilds) < page*10:
-            return await ctx.author.send('```Invalid page```')
+            return await ctx.author.send('```無効なページです```')
 
-        embed = discord.Embed(title='**H43**', description='Server\'s list',
+        embed = discord.Embed(title='**H43**', description='Botが入っているサーバーリスト',
                               colour=discord.Colour.blurple())
         embed.set_thumbnail(
             url='https://avatars1.githubusercontent.com/u/25065248?s=400&u=cfb97be8f4eef00e3f11ed883cd8b2b5f98d1ed9&v=4')
 
         for idx, guild in enumerate(guilds[page*10: page*10 + 10]):
             enum_guilds[idx] = guild
-            embed.add_field(name=f'Number: {idx}', value=guild.name, inline=False)
+            embed.add_field(name=f'番号: {idx}', value=guild.name, inline=False)
 
         message = await ctx.author.send(embed=embed)
 
@@ -36,7 +36,7 @@ class Admin_ext(commands.Cog):
             return user == ctx.author
 
         while True:
-            invite = 'No permission to create invite link'
+            invite = '招待リンクの作成権限がないため、招待リンクを作成できませんでした。'
 
             try:
                 reaction, member = await self.client.wait_for('reaction_add', timeout=25, check=check)
@@ -71,10 +71,10 @@ class Admin_ext(commands.Cog):
                     break
             await ctx.author.send(f'{guild.name} ==> {invite}')
 
-    @commands.command(brief='H43?logout\nStop script')
+    @commands.command(brief='H43?logout\nスクリプトを停止します。')
     async def logout(self, ctx):
-        await ctx.send('Logging out bot!')
-        print('Logging Out Bot!')
+        await ctx.send('BotをLogOutさせます。')
+        print('BotをLogOutさせます。')
         await self.client.logout()
 
 

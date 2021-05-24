@@ -33,7 +33,7 @@ offline_mode = parser.getboolean('Options', 'OfflineMode', fallback=False)
 token = parser.get('Options', 'Token', fallback=None)
 
 if not user_exploits:
-    print('Since no Users were specified in config.ini then bot will listen to all users.\nWarning: If anyone uses correctly the command it will be executed')
+    print('config.iniにUsersが指定されていため、BotはすべてのUserのコマンドを実行します。\n警告：誰でもコマンドが実行できる状態です。')
 
 
 status = discord.Status.invisible if offline_mode else None
@@ -80,12 +80,12 @@ async def on_ready():
 
     print(file)
 
-    print(f'Logged in as {client.user}\n\nID: {client.user.id}\n')
+    print(f'{client.user}としてログインします。\nID: {client.user.id}\n')
 
     if exploit_users:
         print(f'Exploit Users ({len(exploit_users)}):\n\n{"".join(exploit_users)}\n')
     else:
-        print('Everyone can execute commands because it wasn\'t specified at least one User\'s ID\n')
+        print('少なくとも1つ以上のユーザーIDが指定されていない為、全員がコマンドを実行することができます。')
 
 
 @client.check_once
@@ -104,7 +104,7 @@ if __name__ == "__main__":
             print(f"Extension executed: {extension}")
 
     if not token:
-        token = input('Insert the Token: ').strip("'")
+        token = input('Tokeを入力してください: ').strip("'")
 
     try:
         client.run(token)

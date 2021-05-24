@@ -46,3 +46,4 @@ exe = EXE(pyz,
           runtime_tmpdir=None,
           console=True,
 		  icon=path_join('extras', 'icon_h43.ico'))
+          
